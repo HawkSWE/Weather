@@ -1,5 +1,5 @@
 
-$.get( "http://api.openweathermap.org/data/2.5/weather?q=&appid=c5bf5d99c4ebb07f0a60cbabebec2b95&units=metric", function( data ) {
+$.get( "http://api.openweathermap.org/data/2.5/weather?q=Huddinge&appid=c5bf5d99c4ebb07f0a60cbabebec2b95&units=metric", function( data ) {
 
     let namn = data.name
     let temp = Math.floor(data.main.temp)
@@ -14,6 +14,6 @@ $.get( "http://api.openweathermap.org/data/2.5/weather?q=&appid=c5bf5d99c4ebb07f
     $("#mintemp").html(tempmin+" C");
     $("#maxtemp").html(tempmax+" C");
     $("#humidity").html(humidity);
-    $("#windspeed").html(windspeed);
+    $("#windspeed").html(windspeed+" m/s");
     $("#iconbild").attr('src', imgicon);
 });
